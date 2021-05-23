@@ -1,0 +1,16 @@
+﻿@model List<Material>
+<h1>Materiales</h1>
+
+@if(Model != null)
+{
+    @foreach(Material m in Model)
+        {
+            <div>
+                <label>@m.Nombre</label>
+                <p><b>Categoria</b>:@m.Categoria</p>
+                <p><b>Descripcion</b>:@m.Descripcion</p>
+                <label>@m.Precio €</label>
+                <button class="btn btn-info">Detalles</button>
+            </div>
+        }
+}
